@@ -1,0 +1,46 @@
+const shell =
+  'group relative overflow-hidden rounded-2xl border border-zinc-800/90 bg-zinc-950/70 p-7 shadow-[0_28px_90px_-32px_rgba(0,0,0,0.92)] ring-1 ring-zinc-700/20 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-amber-500/35 hover:shadow-[0_32px_100px_-28px_rgba(245,158,11,0.18)]';
+const wash =
+  'pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_130%_90%_at_10%_-25%,rgba(245,158,11,0.16),transparent_55%),radial-gradient(ellipse_90%_70%_at_110%_60%,rgba(20,184,166,0.09),transparent_50%)] opacity-90';
+const grain =
+  'pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay [background-image:url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E")]';
+
+export default function Card() {
+  return (
+    <article className={shell}>
+      <div className={wash} aria-hidden />
+      <div className={grain} aria-hidden />
+      <div className="relative z-10 flex items-start justify-between gap-4">
+        <span className="inline-flex items-center gap-2 rounded-full border border-zinc-700/80 bg-zinc-900/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-400/95">
+          <span
+            className="h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.65)]"
+            aria-hidden
+          />
+          Atlas / UI
+        </span>
+        <span className="text-right text-[10px] font-medium uppercase tracking-widest text-zinc-500">v1</span>
+      </div>
+      <div
+        className="relative z-10 mt-6 h-1 w-14 rounded-full bg-linear-to-r from-amber-400 to-teal-400/90"
+        aria-hidden
+      />
+      <h2 className="font-display relative z-10 mt-5 text-[1.65rem] font-semibold leading-tight text-zinc-50">
+        Unified surface
+      </h2>
+      <p className="relative z-10 mt-3 max-w-prose text-[15px] leading-relaxed text-zinc-400">
+        Ship the same tactile card from Astro, React, Svelte, or Vue—Tailwind ties the islands together without drift.
+      </p>
+      <footer className="relative z-10 mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-zinc-800/70 pt-5 text-xs text-zinc-500">
+        <span className="uppercase tracking-wider">Tailwind 4</span>
+        <span className="text-zinc-700" aria-hidden>
+          ·
+        </span>
+        <span className="uppercase tracking-wider">Islands</span>
+        <span className="text-zinc-700" aria-hidden>
+          ·
+        </span>
+        <span className="uppercase tracking-wider">Mar 2025</span>
+      </footer>
+    </article>
+  );
+}
