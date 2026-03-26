@@ -1,0 +1,17 @@
+---
+import "@/styles/global.css"
+import Agentation from "../components/_utility/Agentation.tsx"
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Astro App</title>
+  </head>
+  <body>
+    <slot />
+    <Agentation client:only="react" />
+  </body>
+</html>
