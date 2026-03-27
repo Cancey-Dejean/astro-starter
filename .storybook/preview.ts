@@ -1,6 +1,7 @@
 import { withThemeByClassName } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react-vite"
 import { INITIAL_VIEWPORTS } from "storybook/viewport"
+import "../src/styles/global.css"
 
 const preview: Preview = {
   parameters: {
