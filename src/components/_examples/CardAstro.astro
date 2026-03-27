@@ -3,6 +3,7 @@
 ---
 
 <div
+  data-card-root
   class="no-repeat mx-auto flex max-w-[894px] flex-col rounded-[6px] border border-[#d1d9e0] bg-cover bg-center p-4"
   style="background-image: url('https://github.githubassets.com/images/modules/memexes/projects-beta-banner.png');"
 >
@@ -22,7 +23,7 @@
       >
     </div>
 
-    <button class="shrink-0" type="button">
+    <button class="shrink-0 cursor-pointer" type="button" data-card-close>
       <svg
         aria-hidden="true"
         height="16"
@@ -38,3 +39,12 @@
     </button>
   </div>
 </div>
+
+<script>
+  const root = document.querySelector("[data-card-root]")
+  const closeButton = document.querySelector("[data-card-close]")
+
+  closeButton?.addEventListener("click", () => {
+    root?.remove()
+  })
+</script>

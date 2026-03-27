@@ -1,11 +1,12 @@
-const shell =
-  "group relative overflow-hidden rounded-2xl border border-zinc-800/90 bg-zinc-950/70 p-7 shadow-[0_28px_90px_-32px_rgba(0,0,0,0.92)] ring-1 ring-zinc-700/20 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-amber-500/35 hover:shadow-[0_32px_100px_-28px_rgba(245,158,11,0.18)]"
-const wash =
-  "pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_130%_90%_at_10%_-25%,rgba(245,158,11,0.16),transparent_55%),radial-gradient(ellipse_90%_70%_at_110%_60%,rgba(20,184,166,0.09),transparent_50%)] opacity-90"
-const grain =
-  'pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay [background-image:url("data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.85%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E")]'
+import { useState } from "react"
 
 export default function Card() {
+  const [isVisible, setIsVisible] = useState(true)
+
+  if (!isVisible) {
+    return null
+  }
+
   return (
     <div
       className="no-repeat mx-auto flex max-w-[894px] flex-col rounded-[6px] border border-[#d1d9e0] bg-cover bg-center p-4"
@@ -31,7 +32,11 @@ export default function Card() {
           </a>
         </div>
 
-        <button type="button" className="shrink-0">
+        <button
+          type="button"
+          className="shrink-0 cursor-pointer"
+          onClick={() => setIsVisible(false)}
+        >
           <svg
             aria-hidden="true"
             height="16"

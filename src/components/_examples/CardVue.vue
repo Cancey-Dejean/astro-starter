@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue"
+
+const isVisible = ref(true)
+const closeCard = () => {
+  isVisible.value = false
+}
+</script>
 
 <template>
   <div
+    v-if="isVisible"
     class="no-repeat mx-auto flex max-w-[894px] flex-col rounded-[6px] border border-[#d1d9e0] bg-cover bg-center p-4"
     style="
       background-image: url(&quot;https://github.githubassets.com/images/modules/memexes/projects-beta-banner.png&quot;);
@@ -23,7 +31,7 @@
         >
       </div>
 
-      <button class="shrink-0" type="button">
+      <button class="shrink-0 cursor-pointer" type="button" @click="closeCard">
         <svg
           aria-hidden="true"
           height="16"
