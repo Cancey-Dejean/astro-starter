@@ -1,21 +1,18 @@
 ---
 import Layout from "@/layouts/main.astro"
-import { Button } from "@/components/ui/button"
-import CardAstro from "@/components/_examples/Card.astro"
-import CardVue from "@/components/_examples/Card.vue"
-import CardSvelte from "@/components/_examples/Card.svelte"
-import CardReact from "@/components/_examples/Card.tsx"
+import CardAstro from "@/components/_examples/CardAstro.astro"
+import CardVue from "@/components/_examples/CardVue.vue"
+import CardSvelte from "@/components/_examples/CardSvelte.svelte"
+import CardReact from "@/components/_examples/CardReact"
 ---
 
 <Layout>
   <div class="flex min-h-svh p-6">
-    <div
-      class="mx-auto flex max-w-7xl min-w-0 flex-col gap-4 text-sm leading-loose"
-    >
+    <div class="mx-auto flex max-w-7xl min-w-0 flex-col gap-6">
+      <CardAstro />
       <CardReact />
       <CardSvelte />
       <CardVue />
-      <CardAstro />
     </div>
   </div>
 </Layout>
