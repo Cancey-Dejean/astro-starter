@@ -16,7 +16,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@babel/core": ">=7.29.6",
+      "@babel/core": "^7.29.6",
       "@hono/node-server": ">=1.19.13",
       "@vitest/browser": ">=4.1.9",
       "brace-expansion": ">=5.0.6",
