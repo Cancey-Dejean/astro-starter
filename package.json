@@ -58,6 +58,7 @@
     "vue": "^3.5.31"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@chromatic-com/storybook": "^5.2.1",
     "@eslint/js": "^9.39.4",
     "@storybook/addon-a11y": "^10.4.6",
